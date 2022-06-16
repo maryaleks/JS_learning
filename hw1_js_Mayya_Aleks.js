@@ -17,11 +17,11 @@ let item_5 = item_3             //  15. Создать переменную “i
 
 let item_6 = 15                     //17. Создать переменную item_6. 19. Присвоить переменной item_6 значение 15
 let item_6_type = typeof(item_6)    // 18. Создать переменную item_6_type 20. Присвоить переменной item_6_type тип переменной item_6
-console.log("item_6 ==", item_6, "item_6_type ==", item_6_type)            //21. Вывести в консоль тип данных item_6 в виде ——  “item_6 == ”  item_6,  “item_6_type == ”  item_6_type —— 
+console.log("item_6 ==", typeof(item_6), "item_6_type ==", item_6_type)            //21. Вывести в консоль тип данных item_6 в виде ——  “item_6 == ”  item_6,  “item_6_type == ”  item_6_type —— 
                
 let item_7 = item_6 + ''            // 22. Создать переменную item_7 и в ней преобразовать item_6 в String.
 let item_7_type = typeof(item_7)   // 23. Создать переменную item_7_type 24. Присвоить переменной item_7_type тип переменной item_7
-console.log("item_7 ==", item_7, "item_7_type ==", item_7_type)   //25. Вывести в консоль тип данных item_7 в виде ——  “item_7 == ”  item_7,  “item_7_type == ”  item_7_type —— 
+console.log("item_7 ==", typeof(item_7), "item_7_type ==", item_7_type)   //25. Вывести в консоль тип данных item_7 в виде ——  “item_7 == ”  item_7,  “item_7_type == ”  item_7_type —— 
 
 let age_1 = 10                      //26. Создать переменную “age_1” и присвоить ей значение 10
 let age_2 = 18                      //27. Создать переменную “age_2” и присвоить ей значение 18
@@ -46,12 +46,5 @@ if (age_1 < age_2) {
 
 
 
-//for(let x=1; x <= 100; x++){
-//    if(x%3==0 && x%5==0){
-//        console.log("Число",x,"- делится без остатка и на 3 и на 5")
- //   } else if (x%3==0){
-//        console.log("Число",x,"- делится без остатка на 3")
-//    }else if (x%5==0) {
- //       console.log("Число",x,"- делится без остатка на 5")
- //     }
- // }
+
+
