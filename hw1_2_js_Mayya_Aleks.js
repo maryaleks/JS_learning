@@ -11,10 +11,7 @@ const checkAge = function(age) {
     if (age_type != 'number') {
         age_1 = Number(age_1)
     }
-    //console.log(age_1, typeof(age_1))
-//}
-//checkAge ()
-
+ 
         if (age_1 < age_2) {
         console.log("You don't have access cause your age is  " +  age_1 + " It’s less then " +  age_2 );
         } 
@@ -28,5 +25,3 @@ const checkAge = function(age) {
             console.log('Technical work')
         } }
 
-checkAge ()
-alert()
