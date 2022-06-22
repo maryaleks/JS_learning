@@ -85,8 +85,10 @@ const isPalindrom = function(word) {
     let wordSimbols = word.split('');
     //console.log(wordSimbols);
     let wordSimbols1 = wordSimbols.reverse();
-    //console.log(wordSimbols1);
-    if (wordSimbols == wordSimbols1) {
+    //console.log(typeof wordSimbols1);
+    let wordSymbols2 = wordSimbols1.join()
+    //console.log(wordSymbols2)
+    if (wordSymbols2 == word) {
         console.log("It's palindrom!")
     }
     else {
@@ -94,4 +96,4 @@ const isPalindrom = function(word) {
     }
     }
 
-isPalindrom('Abba')
+isPalindrom('privet')
