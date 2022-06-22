@@ -1,10 +1,10 @@
 //1. Написать скриптик, который сосчитает и выведет результат от возведения 2 в степень 10, начиная со степени 1
 
-/*let i = 1
+let i = 1
 while (i < 10) {
     console.log(2**i)
     i++
-} */
+} 
 
 //1*. Преобразовать 1 задачу в функцию, принимающую на вход степень, в которую будет возводиться число 2
 
@@ -13,7 +13,6 @@ const stepen = function(j) {
     while (count <= j) {
         console.log(2**count)
         count++
-        
     }
 }
 stepen(10) 
@@ -37,12 +36,11 @@ let smile = ':)'
     (как в условии смайлик), а также количество строк для вывода 
     e.g. function printSmile(stroka, numberOfRows) */
   
-   const printSmile = function (smile, y) {
-        while (y <= 5) {
-            console.log(smile.repeat(y))
-            y++
+const printSmile = function (smile, y) {
+    while (y <= 5) {
+         console.log(smile.repeat(y))
+        y++
    }
- 
 }
 
 printSmile('привет ', 2)
@@ -55,7 +53,6 @@ e.g. function getWordStructure(word)
 Слово (word) состоит из  (число) гласных и (число) согласных букв
 
 Проверки: 'case', 'Case', 'Check-list' */
-
 
 const getWordStructure = function(word) {
 let count1 = 0
@@ -85,8 +82,10 @@ const isPalindrom = function(word) {
     let wordSimbols = word.split('');
     //console.log(wordSimbols);
     let wordSimbols1 = wordSimbols.reverse();
-    //console.log(wordSimbols1);
-    if (wordSimbols == wordSimbols1) {
+    //console.log(typeof wordSimbols1);
+    let wordSymbols2 = wordSimbols1.join()
+    //console.log(wordSymbols2)
+    if (wordSymbols2 == word) {
         console.log("It's palindrom!")
     }
     else {
@@ -94,4 +93,4 @@ const isPalindrom = function(word) {
     }
     }
 
-isPalindrom('Abba')
+isPalindrom('kakova')
