@@ -27,7 +27,8 @@ stepen(10)
 :):):):):) */
 
 let y = 1
-let smile = ':)'
+//let smile = ':)'
+//let smile1 = String(smile) 
     while (y <= 5) {
         console.log(':)'.repeat(y))
         y++
@@ -38,14 +39,16 @@ let smile = ':)'
     e.g. function printSmile(stroka, numberOfRows) */
   
    const printSmile = function (smile, y) {
-        while (y <= 5) {
-            console.log(smile.repeat(y))
-            y++
+        smile = String(smile)
+        let k = 1
+        while (k <= y) {
+            console.log(smile.repeat(k))
+            k++
    }
  
 }
 
-printSmile('привет ', 2)
+printSmile('privet ', 3)
 
 
 /*3**.  Написать функцию, которая принимает на вход слово. Задача функции посчитать и вывести в консоль, сколько в слове гласных,
@@ -56,8 +59,8 @@ e.g. function getWordStructure(word)
 
 Проверки: 'case', 'Case', 'Check-list' */
 
-
-const getWordStructure = function(word) {
+const getWordStructure = function(word){
+word = word.toLowerCase()
 let count1 = 0
 let count2 = 0
 const array1 = ['e','y', 'u', 'i', 'o', 'a'];
@@ -72,9 +75,11 @@ array2.forEach(element => {
     });    
 console.log('Слово', word, 'состоит из', count1, 'гласных и', count2, 'согласных букв')
 }
-
 getWordStructure('Check')
-
+getWordStructure('Check-List')
+getWordStructure('Check-LIST')
+getWordStructure('Check-List21')
+getWordStructure('FTPGTHKT')
 
 /*4**. Написать функцию, которая проверяет, является ли слово палиндромом
 e.g. function isPalindrom(word)
@@ -82,13 +87,10 @@ e.g. function isPalindrom(word)
 Проверки: 'abba', 'Abba'*/
 
 const isPalindrom = function(word) {
-    let wordSimbols = word.split('');
-    //console.log(wordSimbols);
-    let wordSimbols1 = wordSimbols.reverse();
-    //console.log(typeof wordSimbols1);
-    let wordSymbols2 = wordSimbols1.join()
-    //console.log(wordSymbols2)
-    if (wordSymbols2 == word) {
+    let wordSymbols = word.split('').reverse().join('');
+    console.log(wordSymbols);
+
+    if (wordSymbols.toLowerCase() == word.toLowerCase()) {
         console.log("It's palindrom!")
     }
     else {
@@ -96,4 +98,6 @@ const isPalindrom = function(word) {
     }
     }
 
+isPalindrom('Abba')
+isPalindrom('abba')
 isPalindrom('privet')
