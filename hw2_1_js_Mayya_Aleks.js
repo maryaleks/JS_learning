@@ -60,26 +60,27 @@ e.g. function getWordStructure(word)
 Проверки: 'case', 'Case', 'Check-list' */
 
 const getWordStructure = function(word){
-word = word.toLowerCase()
-let count1 = 0
-let count2 = 0
-const array1 = ['e','y', 'u', 'i', 'o', 'a'];
-const array2 = ['q', 'w', 'r', 't', 'p', 'l', 'k', 'j', 'h', 'g', 'f', 'd', 's', 'z', 'x', 'c', 'v', 'b', 'n', 'm'];
-array1.forEach(element => {
-    if (word.includes(element)) {
-    count1++; }
-    }); 
-array2.forEach(element => {
-    if (word.toLowerCase().includes(element)) {
-    count2++; }
-    });    
-console.log('Слово', word, 'состоит из', count1, 'гласных и', count2, 'согласных букв')
-}
-getWordStructure('Check')
-getWordStructure('Check-List')
-getWordStructure('Check-LIST')
-getWordStructure('Check-List21')
-getWordStructure('FTPGTHKT')
+    word = word.toLowerCase().split('');
+    let count1 = 0
+    let count2 = 0
+    const array1 = ['e','y', 'u', 'i', 'o', 'a'];
+    const array2 = ['q', 'w', 'r', 't', 'p', 'l', 'k', 'j', 'h', 'g', 'f', 'd', 's', 'z', 'x', 'c', 'v', 'b', 'n', 'm'];
+    word.forEach(element => {
+        if (array1.includes(element)) {
+        count1++; }
+        }); 
+    word.forEach(element => {
+        if (array2.includes(element)) {
+        count2++; }
+        });    
+    word = word.join('')
+    console.log('Слово', word, 'состоит из', count1, 'гласных и', count2, 'согласных букв')
+    }
+    getWordStructure('Check')
+    getWordStructure('Check-List')
+    getWordStructure('Check-LIST')
+    getWordStructure('Check-List21')
+    getWordStructure('FTPGTHKT')
 
 /*4**. Написать функцию, которая проверяет, является ли слово палиндромом
 e.g. function isPalindrom(word)
